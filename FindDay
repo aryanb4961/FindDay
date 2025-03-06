@@ -1,0 +1,128 @@
+
+import java.util.*;
+import static java.lang.System.out;
+public class FindDay {
+	public static void main(String[]args ) {
+		Scanner kb = new Scanner (System.in);
+		int p = 999999999;
+		String f = "";
+		for (int i =0;i<p;i++) {
+		out.print("Leap Year [Y,N] :: ");
+		String g = kb.nextLine();
+		g=g.substring(0,1);
+		g=g.toUpperCase();
+			if (g.equals("N")) {
+			out.print("Enter day number [1-365]:: ");
+			int e = kb.nextInt();
+			if (e>=1 && e<=31)
+				f+=("January " + e);
+			else if (e>=32 && e<=59)
+				f+=("February " + (e-31));
+			else if (e>=60 && e<=90)
+				f+=("March " + (e-59));
+			else if (e>=91 && e<=120)
+				f+=("April " + (e-90));
+			else if (e>=121 && e<=151)
+				f+=("May " + (e-120));
+			else if (e>=152 && e<=181)
+				f+=("June " + (e-151));
+			else if (e>=182 && e<=212)
+				f+=("July " + (e-181));
+			else if (e>=213 && e<=243)
+				f+=("August " + (e-212));
+			else if (e>=244 && e<=273)
+				f+=("September " + (e-243));
+			else if (e>=274 && e<=304)
+				f+=("October " + (e-273));
+			else if (e>=305 && e<=334)
+				f+=("November " + (e-304));
+			else if (e>=335 && e<=365)
+			f+=("December " + (e-334));
+			
+			
+			String r = (f.substring(f.length()-2));
+			if (r.substring(0,1).equals(" "))
+				r=r.substring(1);
+			
+			int w = Integer.parseInt(r);
+			if (w>=10 && w<=20)
+				f+=("th");
+			else if (f.substring(f.length()-1).equals("1"))
+				f+=("st");
+			else if (f.substring(f.length()-1).equals("2"))
+				f+=("nd");
+			else if (f.substring(f.length()-1).equals("3"))
+				f+=("rd");
+			else 
+				f+=("th");
+			out.print(f);
+			i=p-1;
+				
+		                    } 
+			
+			
+			
+			else if (g.equals("Y")) {
+				out.print("Enter day number [1-366]:: ");
+				int e = kb.nextInt();
+				if (e>=1 && e<=31)
+					f+=("January " + e);
+				else if (e>=32 && e<=60)
+					f+=("February " + (e-31));
+				else if (e>=61 && e<=91)
+					f+=("March " + (e-60));
+				else if (e>=92 && e<=121)
+					f+=("April " + (e-91));
+				else if (e>=122 && e<=152)
+					f+=("May " + (e-121));
+				else if (e>=153 && e<=182)
+					f+=("June " + (e-152));
+				else if (e>=183 && e<=213)
+					f+=("July " + (e-182));
+				else if (e>=214 && e<=244)
+					f+=("August " + (e-213));
+				else if (e>=245 && e<=274)
+					f+=("September " + (e-244));
+				else if (e>=275 && e<=305)
+					f+=("October " + (e-274));
+				else if (e>=306 && e<=335)
+					f+=("November " + (e-305));
+				else if (e>=336 && e<=366)
+				f+=("December " + (e-335));
+				
+				
+				String r = (f.substring(f.length()-2));
+				if (r.substring(0,1).equals(" "))
+					r=r.substring(1);
+				
+				int w = Integer.parseInt(r);
+				if (w>=10 && w<=20)
+					f+=("th");
+				else if (f.substring(f.length()-1).equals("1"))
+					f+=("st");
+				else if (f.substring(f.length()-1).equals("2"))
+					f+=("nd");
+				else if (f.substring(f.length()-1).equals("3"))
+					f+=("rd");
+				else 
+					f+=("th");
+				out.print(f);
+				i=p-1;
+			}
+			
+			else {
+				out.print("Try Again\n");
+				
+			}
+		}
+		kb.close();
+
+			
+			
+			
+			
+			
+			
+			
+}
+}
